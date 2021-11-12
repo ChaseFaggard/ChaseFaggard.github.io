@@ -188,7 +188,7 @@ body {
 
   /* Media Queries */
   @media screen and (max-width: 570px) {
-    .sidebar { position: relative; top: 30px; width: 50%; margin: 60px auto 30px auto !important; text-align: center;}
+    .sidebar { position: relative; top: 30px; width: 50%; margin: 30px auto 30px auto !important; text-align: center;}
 	.sidebar a { display: inline; }
     .radialProgressbar { margin: 0; }
   }
