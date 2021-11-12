@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600');
+
+/* CSS Variables */
+:root {
+    --blue-dark: #227093;	
+	--blue: #169ad3;	
+	--cadet-blue: #0db9cf;	
+	--dark: #343a40;	
+	--floral-white: #FFF8F0;
+	--green-dark: #218c74;	
+	--green: #33d9b2;	
+	--grey-dark: #404040;
+	--grey-medium: #727476;	
+	--grey-light: #ced4da;	
+	--grey: #84817a;	
+	--light: #e9ecef;	
+	--mustard: #FDEBD0;
+	--navy: #003366;	
+	--orange-dark: #cd6133;	
+	--orange: #ff7d59;	
+	--purple-dark: #474787;	
+	--purple-light: #dabee5;	
+	--purple: #948392;	
+	--red-dark: #b33939;	
+	--red: #ff5252;	
+	--pink: #ffcccb;
+	--super-light: #F4F6F7;	
+	--turquoise: #48d1cc;	
+	--yellow-dark: #ccae62;	
+	--yellow: #ffd463;
+
+	/* Fonts */
+	--poppins: 'Poppins', sans-serif;
+	--barlow: 'Barlow Semi Condensed', sans-serif;
+
+    --theme: var(--floral-white);
+    --theme-text: var(--grey-medium);
+}
+
+/* Solid Theme Presets */
+.ac-blue { --theme: var(--blue); }
+.ac-blue-dark { --theme: var(--blue-dark); }
+.ac-cadet-blue { --theme: var(--cadet-blue); }
+.ac-dark { --theme: var(--dark); }
+.ac-green-dark { --theme: var(--green-dark); }
+.ac-green { --theme: var(--green); }
+.ac-grey-dark { --theme: var(--grey-dark); }
+.ac-grey-medium { --theme: var(--grey-medium); }
+.ac-grey-light { --theme: var(--grey-light); }
+.ac-grey { --theme: var(--grey); }
+.ac-floral-white { --theme: var(--floral-white); }
+.ac-light { --theme: var(--light); }
+.ac-mustard { --theme: var(--mustard); }
+.ac-navy { --theme: var(--navy); }
+.ac-orange-dark { --theme: var(--orange-dark); }
+.ac-orange { --theme: var(--orange); }
+.ac-pink { --theme: var(--pink); }
+.ac-purple-dark { --theme: var(--purple-dark); }
+.ac-purple-light { --theme: var(--purple-light); }
+.ac-purple { --theme: var(--purple); }
+.ac-red { --theme: var(--red); }
+.ac-red-dark { --theme: var(--red-dark); }
+.ac-super-light { --theme: var(--super-light); }
+.ac-turquoise { --theme: var(--turquoise); }
+.ac-yellow-dark { --theme: var(--yellow-dark); }
+.ac-yellow { --theme: var(--yellow); }
+
+/* Font awesome icon style */
+i {
+    font-size: 1.2em;
+    color: var(--theme);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--poppins);
+}
+
+.theme-bg { background: var(--theme) !important; }
+.theme-text { color: var(--theme-text) !important; }
+.bg-superlight { background: var(--super-light) !important; }
+
+.container-box { 
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section {
+   
+}
+
+.skills {
+    width: 80%;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.list-group-item {
+    transition: .15s;
+    cursor: pointer;
+}
+
+.list-group-item.biking:hover {
+    background: var(--red-dark);
+    color: white;
+}
+.list-group-item.tennis:hover {
+    background: var(--green-dark);
+    color: white;
+}
+.list-group-item.photography:hover {
+    background: var(--grey-light);
+    color: white;
+}
+.list-group-item.video-games:hover {
+    background: black;
+    color: white;
+}
+
+/* Side bar */
+.sidebar { 
+	position: fixed; 
+	top: 50%;
+	left: 0px; 
+	transform: translate(0, -50%);
+	padding: 5px;
+	background-color: white;
+	opacity: .9;
+}
+.sidebar a { display: block; padding: 5px 7px 5px 5px; }
+.sidebar i { font-size: 2.5em; transition: .15s; }
+.sidebar i:hover { color: black; }
+
+/* Radial Progress Bar Styles */
+.radialProgressBar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #ddd;
+    margin: 10px auto;
+  }
+  .radialProgressBar:hover { --theme: var(--grey-medium); cursor: default; }
+  .radialProgressBar .overlay {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background: #fff;
+    text-align: center;
+    padding-top: 30%;
+    font-size: 1.2em;
+  }
+  .radialProgressBar .overlay span {
+      margin-top: -4px;
+      display: block;
+  }
+  
+  .progress-50 {
+    background-image: -webkit-linear-gradient(right, #ddd 50%, transparent 50%), -webkit-linear-gradient(left, var(--theme) 50%, #ddd 50%);
+    background-image: linear-gradient(-90deg, #ddd 50%, transparent 50%), linear-gradient(90deg, var(--theme) 50%, #ddd 50%);
+  }
+  .progress-60 {
+    background-image: -webkit-linear-gradient(left, var(--theme) 50%, transparent 50%), -webkit-linear-gradient(36deg, var(--theme) 50%, #ddd 50%);
+    background-image: linear-gradient(90deg, var(--theme) 50%, transparent 50%), linear-gradient(54deg, var(--theme) 50%, #ddd 50%);
+  }
+  .progress-70 {
+    background-image: -webkit-linear-gradient(left, var(--theme) 50%, transparent 50%), -webkit-linear-gradient(72deg, var(--theme) 50%, #ddd 50%);
+    background-image: linear-gradient(90deg, var(--theme) 50%, transparent 50%), linear-gradient(18deg, var(--theme) 50%, #ddd 50%);
+  }
+  .progress-80 {
+    background-image: -webkit-linear-gradient(left, var(--theme) 50%, transparent 50%), -webkit-linear-gradient(108deg, var(--theme) 50%, #ddd 50%);
+    background-image: linear-gradient(90deg, var(--theme) 50%, transparent 50%), linear-gradient(-18deg, var(--theme) 50%, #ddd 50%);
+  }
+  .progress-90 {
+    background-image: -webkit-linear-gradient(left, var(--theme) 50%, transparent 50%), -webkit-linear-gradient(144deg, var(--theme) 50%, #ddd 50%);
+    background-image: linear-gradient(90deg, var(--theme) 50%, transparent 50%), linear-gradient(-54deg, var(--theme) 50%, #ddd 50%);
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 570px) {
+    .sidebar { position: relative; top: 30px; width: 50%; margin: 60px auto 30px auto !important; text-align: center;}
+	.sidebar a { display: inline; }
+    .radialProgressbar { margin: 0; }
+  }
