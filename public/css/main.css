@@ -36,6 +36,8 @@
 
     --theme: var(--floral-white);
     --theme-text: var(--grey-medium);
+
+    --background-image: url(https://img.wallpapersafari.com/phone/1440/2560/97/64/qNZwh3.jpg);
 }
 
 /* Solid Theme Presets */
@@ -66,10 +68,59 @@
 .ac-yellow-dark { --theme: var(--yellow-dark); }
 .ac-yellow { --theme: var(--yellow); }
 
+* { margin: 0; }
+
 /* Font awesome icon style */
 i {
     font-size: 1.2em;
     color: var(--theme);
+}
+
+.animated {
+    font-size: 80px;
+    margin: 30px;
+    position: absolute;
+    -webkit-animation: linear infinite;
+    -webkit-animation-duration: 40s;
+}
+
+.l1 { left: 5%; }
+.l2 { left: 30%; }
+.l3 { left: 55%; }
+.l4 { left: 80%; }
+
+.a1 { -webkit-animation-name: r1; }
+.a2 { -webkit-animation-name: r2; }
+.a3 { -webkit-animation-name: r3; }
+.a4 { -webkit-animation-name: r4; }
+
+
+@-webkit-keyframes r1 {
+    0%      { top: 5%; }
+    94.999% { top: 100%; }
+    95%     { top: 0; }
+    100%    { top: 5%; }
+}
+
+@-webkit-keyframes r2 {
+    0%      { top: 30%; }
+    69.999% { top: 100%; }
+    70%     { top: 0; }
+    100%    { top: 30%; }
+}
+
+@-webkit-keyframes r3 {
+    0%      { top: 55%; }
+    44.999% { top: 100%; }
+    45%     { top: 0; }
+    100%    { top: 55%; }
+}
+
+@-webkit-keyframes r4 {
+    0%      { top: 80%; }
+    19.999% { top: 100%; }
+    20%     { top: 0; }
+    100%    { top: 80%; }
 }
 
 html {
@@ -78,11 +129,22 @@ html {
 
 body {
     font-family: var(--poppins);
+    /*background: var(--background-image) no-repeat center center; */
+    background: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: var(--grey-dark);
 }
 
 .theme-bg { background: var(--theme) !important; }
 .theme-text { color: var(--theme-text) !important; }
 .bg-superlight { background: var(--super-light) !important; }
+
+.container {
+    opacity: .93;
+}
 
 .container-box { 
     width: 100%;
@@ -103,6 +165,7 @@ body {
 }
 
 .list-group-item {
+    background: var(--super-light);
     transition: .15s;
     cursor: pointer;
 }
@@ -131,7 +194,7 @@ body {
 	left: 0px; 
 	transform: translate(0, -50%);
 	padding: 5px;
-	background-color: white;
+	background: var(--super-light);
 	opacity: .9;
 }
 .sidebar a { display: block; padding: 5px 7px 5px 5px; }
