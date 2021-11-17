@@ -38,6 +38,8 @@
     --theme-text: var(--grey-medium);
 
     --background-image: url(https://img.wallpapersafari.com/phone/1440/2560/97/64/qNZwh3.jpg);
+
+    --opacity: .93;
 }
 
 /* Solid Theme Presets */
@@ -77,9 +79,9 @@ i {
 }
 
 .animated {
-    font-size: 80px;
+    font-size: 75px;
     margin: 30px;
-    position: absolute;
+    position: fixed;
     -webkit-animation: linear infinite;
     -webkit-animation-duration: 40s;
 }
@@ -87,7 +89,7 @@ i {
 .l1 { left: 5%; }
 .l2 { left: 30%; }
 .l3 { left: 55%; }
-.l4 { left: 80%; }
+.l4 { left: 85%; }
 
 .a1 { -webkit-animation-name: r1; }
 .a2 { -webkit-animation-name: r2; }
@@ -143,7 +145,7 @@ body {
 .bg-superlight { background: var(--super-light) !important; }
 
 .container {
-    opacity: .93;
+    opacity: var(--opacity);
 }
 
 .container-box { 
@@ -193,12 +195,11 @@ body {
 	top: 50%;
 	left: 0px; 
 	transform: translate(0, -50%);
-	padding: 5px;
 	background: var(--super-light);
-	opacity: .9;
+	opacity: var(--opacity);
 }
-.sidebar a { display: block; padding: 5px 7px 5px 5px; }
-.sidebar i { font-size: 2.5em; transition: .15s; }
+.sidebar a { display: block; padding: 8px 13px; }
+.sidebar i { font-size: 50px; transition: .15s; }
 .sidebar i:hover { color: black; }
 
 /* Radial Progress Bar Styles */
@@ -211,6 +212,7 @@ body {
     display: flex;
     background: #ddd;
     margin: 10px auto;
+    transition: .15s; 
   }
   .radialProgressBar:hover { --theme: var(--grey-medium); cursor: default; }
   .radialProgressBar .overlay {
@@ -251,7 +253,8 @@ body {
 
   /* Media Queries */
   @media screen and (max-width: 570px) {
-    .sidebar { position: relative; top: 30px; width: 50%; margin: 30px auto 30px auto !important; text-align: center;}
+    .sidebar { position: relative; top: 30px; width: 50%; margin: 30px auto 30px auto !important; text-align: center; padding-top: 10px; padding-bottom: 10px; }
 	.sidebar a { display: inline; }
     .radialProgressbar { margin: 0; }
+    .animated { display: none; }
   }
